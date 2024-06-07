@@ -1,0 +1,13 @@
+body {
+    background: #222;
+    color: #eee;
+    text-align: center;
+}
+
+.parallax-circle {
+    margin: 24px auto;
+    width: 128px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px #ee2 solid;
+}
