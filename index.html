@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursor Parallax</title>
     <script src="cursor-parallax.js"></script>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Sample</h1>
-    <div class="parallax-circle"></div>
     <script>
-        new Parallax('.parallax-circle');
+        window.onload = () => {
+            new Parallax('p', { scale: -1 });
+            new Parallax('.l1', { scale: 1 });
+            new Parallax('.l2', { scale: 0.7 });
+            new Parallax('.l3', { scale: 0.3 });
+        };
     </script>
+</head>
+
+<body>
+    <p>SIMPLE PARALLAX</p>
+    <div class="l1"></div>
+    <div class="l2"></div>
+    <div class="l3"></div>
 </body>
+
 </html>

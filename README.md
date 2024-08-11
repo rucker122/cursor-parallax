@@ -1,3 +1,5 @@
 # Parallax triggered by cursor movement
 
-WIP
+## WIP
+
+### Preview:　https://rucker122.github.io/cursor-parallax/

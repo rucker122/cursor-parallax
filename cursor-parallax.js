@@ -1,15 +1,14 @@
 class Parallax {
     _settings = {
-        orientation: 0,     // positive: 1 / negative: 2
         scale: 1
     }
-    
+
     constructor(n, options) {
-        this.initElement(n);
         Object.assign(this._settings, options);
+        this.init(n);
     }
 
-    initElement(n) {
+    init(n) {
         if (n === undefined || n === null || n.trim() === '') {
             console.error('Can not get Element: ElementName is not given.');
             return;
@@ -24,15 +23,13 @@ class Parallax {
 
     startParallax() {
         document.addEventListener("mousemove", (e) => {
-            let moveX = (e.x - window.innerWidth / 2) / 50;
-            let moveY = (e.y - window.innerHeight / 2) / 50;
+            let moveX = (e.x - window.innerWidth / 2) / 5;
+            let moveY = (e.y - window.innerHeight / 2) / 5;
 
-            // determining element's direction
-            if (this._settings.orientation === 0) [ moveX, moveY ] = [ -moveX, -moveY ];
             // set scale
-            [ moveX, moveY ] = [ moveX * this._settings.scale, -moveY * this._settings.scale ];
+            [moveX, moveY] = [-moveX * this._settings.scale, -moveY * this._settings.scale];
 
-            this.element.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            this.element.style.translate = `${moveX}px ${moveY}px`;
         });
     }
 }

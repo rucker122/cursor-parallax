@@ -1,13 +1,46 @@
 body {
-    background: #222;
-    color: #eee;
-    text-align: center;
+    background: linear-gradient(45deg, #112 50%, #335);
+    height: 100vh;
+    display: flex;
+    margin: 0;
+    overflow: hidden;
 }
 
-.parallax-circle {
-    margin: 24px auto;
-    width: 128px;
+* {
+    transition: 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+p {
+    color: #eee;
+    margin: auto;
+    font-size: 10rem;
+}
+
+div {
+    position: absolute;
+    background: #fc3;
+    box-shadow: 0 0 20px #fc3;
+    opacity: .9;
+    border-radius: 100%;
+}
+
+.l1 {
+    top: 10%;
+    left: 10%;
+    width: 10%;
     aspect-ratio: 1;
-    border-radius: 50%;
-    border: 2px #ee2 solid;
+}
+
+.l2 {
+    top: 70%;
+    left: 70%;
+    width: 30%;
+    aspect-ratio: 1;
+}
+
+.l3 {
+    top: 2%;
+    left: 90%;
+    width: 5%;
+    aspect-ratio: 1;
 }
